@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.nav__link {
+  font-size: 18px;
+  position: relative;
+  transition: all .2s;
+  font-weight: 400;
+  column-gap: 30px;
+  padding-right: 24px;
+}
+
+@media screen and (min-width: 760px) {
+  .nav__link {
+    color: var(--primary-color);
+    font-size: 16px;
+    column-gap: 30px;
+  }
+}
+
+.underline {
+  margin-bottom: 80px;
+  width: 165px;
+  height: 8px;
+  border-radius: 1000px;
+  background: var(--gr-4, linear-gradient(54deg, #0091ff 0, #9cfeff 100%));
+
+}
+
+.trueAiBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6rem 0;
+  position: relative;
+  width: 100%;
+  height: 550px;
+  z-index: 10;
+  -webkit-clip-path: polygon(0 22.5%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 22.5%, 100% 0, 100% 100%, 0 100%);
+}
+
+.animated-text {
+  color: transparent;
+  background-image: linear-gradient(to right, #9747ff, #2f80ed, #ee216b);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-size: 200%;
+  animation: background-pan 2s linear infinite;
+
+  @keyframes background-pan {
+    0% {
+      background-position: 0;
+    }
+
+    100% {
+      background-position: -200%;
+    }
+  }
+}
+
+.trueVid{
+  border-radius: 1000px 0 0 1000px;
+  width: auto;
+}
+
+.grid-check{
+  display: grid;
+    grid-template-columns: 1fr max-content 1fr;
+    grid-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+    width: 100%;
+}
